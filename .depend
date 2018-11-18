@@ -1,0 +1,6 @@
+
+obj/windows_gcc/MM_UnitTestFramework_main.o: src/MM_UnitTestFramework_main.cpp \
+ src/MM_UnitTestFramework/MM_UnitTestFramework.h
+
+obj/windows_gcc/MM_UnitTestFramework_Test/MM_UnitTestFramework_Test.o: src/MM_UnitTestFramework_Test/MM_UnitTestFramework_Test.cpp \
+ src/MM_UnitTestFramework/MM_UnitTestFramework.h
