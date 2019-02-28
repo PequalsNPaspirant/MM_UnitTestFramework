@@ -89,7 +89,7 @@ Values   : 2, 2, 2
 		MM_COUT << "\n    Variables: " << string(#__VA_ARGS__); \
 		cout << std::boolalpha; \
 		MM_COUT << "\n    Values   : "; \
-		mm::printDifferentTypesOfVariables(__VA_ARGS__); \
+		mm::printDifferentTypesOfVariables(##__VA_ARGS__); \
 		MM_COUT << "\n"; \
 	}
 
@@ -161,7 +161,7 @@ Output:
 		width += initialSpacing; \
 		MM_COUT << "\n" << std::setw(width) << "Variables" << " : Values\n"; \
 		cout << std::boolalpha; \
-		mm::printDifferentTypesOfVariables(width, variables, __VA_ARGS__); \
+		mm::printDifferentTypesOfVariables(width, variables, ##__VA_ARGS__); \
 		MM_COUT << "\n"; \
 	}
 
@@ -205,7 +205,7 @@ Output:
 			MM_COUT << "\n     File: " << fileName.substr(fileName.find_last_of('\\') + 1, string::npos) << " Line: " << lineNumber; \
 			if(!__mm_unit_test_result__ || printResults) \
 			{ \
-				__PRINT_VARIABLES_AND_VALUES__4(validationStatement, __VA_ARGS__) \
+				__PRINT_VARIABLES_AND_VALUES__4(validationStatement, ##__VA_ARGS__) \
 				if(!__mm_unit_test_result__ && pauseOnError<void>()) \
 				{ \
 					MM_COUT << "\nPress any key to continue..."; \
@@ -215,8 +215,8 @@ Output:
 		} \
 	}
 
-#define MM_EXPECT_TRUE(validationStatement, ...) __MM_EXPECT_TRUE_PRINT__(false, true, false, validationStatement, __VA_ARGS__)
-#define MM_EXPECT_TRUE_PRINT(printSuccess, printFailure, printResults, validationStatement, ...) __MM_EXPECT_TRUE_PRINT__(printSuccess, printFailure, printResults, validationStatement, __VA_ARGS__)
+#define MM_EXPECT_TRUE(validationStatement, ...) __MM_EXPECT_TRUE_PRINT__(false, true, false, validationStatement, ##__VA_ARGS__)
+#define MM_EXPECT_TRUE_PRINT(printSuccess, printFailure, printResults, validationStatement, ...) __MM_EXPECT_TRUE_PRINT__(printSuccess, printFailure, printResults, validationStatement, ##__VA_ARGS__)
 
 #define __MM_EXPECT_EQUAL_PRINT__(printSuccess, printFailure, printResults, expected, actual) \
 	{ \
