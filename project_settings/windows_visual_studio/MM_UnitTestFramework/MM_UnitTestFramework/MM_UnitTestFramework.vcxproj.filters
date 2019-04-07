@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\src\MM_UnitTestFramework_main.cpp">
+    <ClCompile Include="..\..\..\..\src\MM_UnitTestFramework_Test\MM_UnitTestFramework_Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\src\MM_UnitTestFramework_Test\MM_UnitTestFramework_Test.cpp">
+    <ClCompile Include="..\..\..\..\src\_MM_UnitTestFramework_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

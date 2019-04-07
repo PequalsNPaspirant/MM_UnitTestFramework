@@ -18,7 +18,8 @@ namespace mm {
 	{
 		//Test Unit Test Framework functions here
 		int v1 = 10, v2 = 10, v3 = 15;
-		__PRINT_VARIABLES_AND_VALUES__4(v1 == v2 && v2 != v3, v1, v2, v3)
+		string separator("\n      ===>");
+		__PRINT_VARIABLES_AND_VALUES__4(separator, v1 == v2 && v2 != v3, v1, v2, v3)
 	}
 
 	MM_UNIT_TEST(MM_UnitTestFramework_testcase_2_success, MM_UnitTestFramework_Testing)
