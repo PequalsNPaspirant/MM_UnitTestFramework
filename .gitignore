@@ -38,3 +38,4 @@
 /bin/windows_gcc/*.exe
 /obj/windows_gcc/MM_UnitTestFramework_Test/*.o
 /obj/windows_gcc/*.o
+obj/windows_visual_studio/Debug_x64/_MM_UnitTestFramework_main.obj
